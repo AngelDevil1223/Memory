@@ -9,14 +9,17 @@ The four algorithms to be used for placing a process in memory are:
 • First fit: First fit searches the free list from the beginning, and uses the first hole large 
 enough to satisfy the request. If the hole is larger than necessary, it is split, with the process 
 occupying the lower address range portion of the hole and the remainder being put on the free list. 
+
 • Best fit: Chooses the smallest hole from the free list that will satisfy the request. If multiple 
 holes meet this criterion, choose the lowest address one in the free list. If the hole is larger 
 than necessary, it is split, with the process occupying the lower address range portion of the hole 
 and the remainder being put on the free list. 
+
 • Worst fit: Chooses the largest hole from the free list that will satisfy the request. If multiple 
 holes meet this criterion, choose the earliest one in the free list. If the hole is larger than 
 necessary, it is split, with the process occupying the lower address range portion of the hole and 
 the remainder being put on the free list. 
+
 • Next Fit: This is like first fit, but begins searching the free list from the position where the 
 previous hole was found. It if gets to the end of the free list without finding a large enough 
 hole, it wraps around to the beginning. 
