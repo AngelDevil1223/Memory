@@ -42,25 +42,33 @@ MB, etc.
 Points to note: 
 
 • Each process id is a unique positive integer. 
+
 • Each process size is a positive integer ≤ m (the main memory size). 
 
 We may assume the input file being read in will always be in the correct format. The simulation 
 should behave as follows:
+
 • Parse the process file to obtain the initial queue of processes waiting to be swapped into 
 memory. 
+
 • Assume memory is initially empty. 
-• Load the processes from the queue into memory, one by one, according to one of the four algo- 
-rithms. 
+
+• Load the processes from the queue into memory, one by one, according to one of the four algorithms. 
+
 • If a process needs to be loaded, but there is no hole large enough to fit it, then processes 
 should be swapped out, one by one, until there is a hole large enough to hold the process needing 
-to be loaded. 
+to be loaded.
+
 • If a process needs to be swapped out, choose the one which has the largest size. If two processes 
 have equal largest size, choose the one which has been in memory the longest (measured from the 
 time it was most recently placed in memory). 
+
 • After a process has been swapped out, it is placed at the end of the queue of processes waiting 
 to be swapped in. 
+
 • Once a process has been swapped out for the third time, we assume the process has finished and it 
 is not re-queued. Note that not all processes will be swapped out for three times.
+
 • The simulation should terminate once no more processes are waiting to be swapped into memory.
 
 
